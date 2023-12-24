@@ -155,14 +155,16 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
+          ChatGPT
         </div>
         <div className={styles["sidebar-sub-title"]}>
           本站默认采用GPT-3.5-Turbo模型!
           如需使用GPT-4请点击左下角设置(需您的apikey支持)
           <div>
             联系邮箱:zhouzhouya.top@qq.com
-            联系微信:zsx009
+          </div>
+          <div>
+          联系微信:zsx009
           </div>
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
