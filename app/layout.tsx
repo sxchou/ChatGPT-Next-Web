@@ -4,6 +4,10 @@ import "./styles/markdown.scss";
 import "./styles/highlight.scss";
 import { getClientConfig } from "./config/client";
 import { type Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getServerSideConfig } from "./config/server";
+
+const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
   title: "NextChat",
@@ -36,7 +40,14 @@ export default function RootLayout({
         <script src="/serviceWorkerRegister.js" defer></script>
         <script dangerouslySetInnerHTML={{ __html: `var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?caab67996e84a16c181b90e96244a225";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();` }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {serverConfig?.isVercel && (
+          <>
+            <SpeedInsights />
+          </>
+        )}
+      </body>
     </html>
   );
 }
