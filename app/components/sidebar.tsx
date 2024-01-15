@@ -164,7 +164,7 @@ export function SideBar(props: { className?: string }) {
             联系邮箱:zhouzhouya.top@qq.com
           </div>
           <div>
-            个人博客:<a href="https://zhouzhouya007.pythonanywhere.com/">https://zhouzhouya007.pythonanywhere.com</a>
+            博客首页:<a href="https://zhouzhouya007.pythonanywhere.com/">周世旭的个人博客</a>
           </div>
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
